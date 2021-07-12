@@ -33,7 +33,7 @@ class Playlist(models.Model):
 
     class Meta:
         db_table = 'playlist'
-
+ 
     def __str__(self):
         return repr(self.title)
 
