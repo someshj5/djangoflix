@@ -18,5 +18,5 @@ def publish_state_pre_save(sender,instance,*args, **kwargs):
 def slugify_pre_save(sender,instance,*args, **kwargs):
             if instance.slug is None:
              instance.slug = slugify(instance.title)
-# 
+# #
 # pre_save.connect(slugify_pre_save,sender=Video)
