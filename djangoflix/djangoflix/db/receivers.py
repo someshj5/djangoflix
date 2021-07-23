@@ -13,10 +13,7 @@ def publish_state_pre_save(sender,instance,*args, **kwargs):
     elif is_draft:
         instance.publish_timestamp = None
 
-# pre_save.connect(publish_state_pre_save,sender=Video)
 
 def slugify_pre_save(sender,instance,*args, **kwargs):
             if instance.slug is None:
              instance.slug = slugify(instance.title)
-# #
-# pre_save.connect(slugify_pre_save,sender=Video)
