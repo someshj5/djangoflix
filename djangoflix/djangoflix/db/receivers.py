@@ -5,7 +5,7 @@ from django.utils.text import slugify
 
 
 def publish_state_pre_save(sender,instance,*args, **kwargs):
-    """Sigmal for pre_save"""
+    """Signal for pre_save"""
     is_published = instance.state == PublishStateOptions.PUBLISH
     is_draft = instance.state == PublishStateOptions.DRAFT
     if is_published and instance.publish_timestamp is None:
@@ -16,5 +16,8 @@ def publish_state_pre_save(sender,instance,*args, **kwargs):
 
 
 def slugify_pre_save(sender,instance,*args, **kwargs):
+    """
+    Signal for slugify pre_save
+    """
     if instance.slug is None:
         instance.slug = slugify(instance.title)
