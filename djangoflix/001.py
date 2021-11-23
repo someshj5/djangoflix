@@ -17,3 +17,10 @@ def palindrome(string):
         return True
 
     return  False
+
+def is_palindome(string):
+    original = string
+    reversed_string = reverse(original)
+    if reversed_string == original:
+        return True
+    return False
