@@ -11,3 +11,9 @@ def reverse(nums):
         nums[start],nums[end] = nums[end],nums[start]
         start = start + 1
         end = end - 1
+
+def palindrome(string):
+    if string == string[::-1]:
+        return True
+    else:
+        return  False
