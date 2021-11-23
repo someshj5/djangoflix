@@ -4,11 +4,11 @@ def substring(str):
 
 print(substring("qwertykeyboards"))
 
-def reverse(nums):
+def reverse(data):
     start = 0
-    end = len(nums)-1
+    end = len(data)-1
     while end> start:
-        nums[start],nums[end] = nums[end],nums[start]
+        data[start],data[end] = data[end],data[start]
         start = start + 1
         end = end - 1
 
