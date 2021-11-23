@@ -15,5 +15,5 @@ def reverse(nums):
 def palindrome(string):
     if string == string[::-1]:
         return True
-    else:
-        return  False
+
+    return  False
