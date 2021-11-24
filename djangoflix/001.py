@@ -2,15 +2,17 @@ def substring(str):
     print(str[:len(str)//2])
     return str[:len(str)//2]
 
-print(substring("qwertykeyboards"))
+# print(substring("qwertykeyboards"))
 
 def reverse(data):
+    data = list(data)
     start = 0
     end = len(data)-1
     while end> start:
         data[start],data[end] = data[end],data[start]
         start = start + 1
         end = end - 1
+    return ''.join(data)
 
 def palindrome(string):
     if string == string[::-1]:
@@ -24,3 +26,6 @@ def is_palindome(string):
     if reversed_string == original:
         return True
     return False
+
+if __name__ == "__main__":
+    print(is_palindome('racecar'))
