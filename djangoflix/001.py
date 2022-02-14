@@ -27,5 +27,37 @@ def is_palindome(string):
         return True
     return False
 
+def reverse_num(num):
+    reverse_number = 0
+    remainder = 0
+
+    while num > 0:
+        # print(num)
+        remainder = num%10
+        num = num//10
+        reverse_number = reverse_number*10 + remainder
+        print(reverse_number)
+    return reverse_number
+
+def is_anagram(str1,str2):
+    if len(str1) != len(str2):
+        return False
+    str1 = sorted(str1)
+    str2 = sorted(str2)
+    if str1 == str2:
+        return True
+    else:
+        return False
+def duplicates(nums):
+    for num in nums:
+        if nums[abs(num)] >=0:
+            nums[abs(num)] = - nums[abs(num)]
+        else:
+            print(f"repetition found:{str(abs(num))}")
+
+
 if __name__ == "__main__":
-    print(is_palindome('racecar'))
+    # print(is_palindome('racecar'))
+    # print(reverse_num(1234))
+    print(is_anagram('restful', 'fluster'))
+    # print(duplicates([1,2,3,2,1]))
