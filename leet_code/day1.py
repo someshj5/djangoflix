@@ -39,3 +39,28 @@ class MyHashMap:
             del self.buckets[ind][ind_to_remove]
 
 
+class Solution:
+    def IsPalindrome(self,head):
+        rev = None
+        slow = head
+        fast =head
+
+        while fast and fast.next:
+            #Keep moving in double speed
+            fast = fast.next.next
+            #Keep reversing the node
+            slow_next = slow.next
+            slow.next = rev
+            rev = slow
+            slow = slow_next
+        #In case lenght of linkedlist is odd
+        if fast:
+            slow = slow.next
+        # Compare the elements
+        while rev and rev.val == slow.val:
+            slow = slow.next
+            rev = rev.next
+        return not rev
+
+
+
