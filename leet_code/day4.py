@@ -37,7 +37,7 @@ def lengthOfLongestSubstring(s):
 
 if __name__ == "__main__":
     sol = Solution()
-    res = sol.isValid('()')
+    # res = sol.isValid('()')
     print(res)
 
 
