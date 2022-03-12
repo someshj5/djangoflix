@@ -90,9 +90,29 @@ class Solution:
                 l += 1
         l,r = res
         return s[l:r+1] if resLen != float('infinity') else ""
-                
-            
-            
+
+
+class Solution:
+    def reverseList(self, head):
+        prev, curr = None,head
+        while curr:
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nxt
+        return prev
+
+
+
+class Solution:
+    def hasCycle(self, head):
+        slow,fast = head,head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
+        return False        
 
 if __name__ == "__main__":
     sol = Solution()
